@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Talk to Moli | HappySmile (voice preview)</title>
+<style>
+:root{--navy:#0a2240;--gold:#c9994a;--ink:#12243a;--mut:#5b6f89;--line:#d8e2ef}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari","Nirmala UI",sans-serif;color:var(--ink);background:linear-gradient(#f8f9fc,#eef3fa);min-height:100vh}
+main{max-width:560px;margin:0 auto;padding:20px 16px 90px}
+h1{font-family:"Iowan Old Style",Palatino,"Noto Serif",Georgia,serif;font-weight:500;font-size:28px;line-height:1.15;color:var(--navy);margin:8px 0 6px}
+h1::after{content:"";display:block;width:64px;height:3px;border-radius:2px;margin-top:12px;background:linear-gradient(90deg,#8a6a31,#e6cb91)}
+p{color:var(--mut);line-height:1.6;margin:8px 0 16px}.badge{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a6a31;font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:20px;padding:18px;box-shadow:0 1px 2px rgba(10,34,64,.06),0 10px 24px -14px rgba(10,34,64,.22)}
+input{width:100%;font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;min-height:48px}
+button{width:100%;min-height:52px;font:inherit;font-weight:650;color:#fff;border:2px solid transparent;border-radius:14px;cursor:pointer;background:linear-gradient(180deg,#1a4a8a,#0f3166 48%,#0a2240);box-shadow:0 0 0 2px #c9994a,0 12px 24px -12px rgba(10,34,64,.7)}
+button.end{background:linear-gradient(180deg,#8a2b2b,#6d1f1f);box-shadow:0 0 0 2px #c9994a}button:disabled{opacity:.6}
+#status{margin:12px 0 0;text-align:center;font-size:14px;color:var(--mut);min-height:20px}#status.speak{color:#1d5fb3;font-weight:600}#status.err{color:#a33}
+#log{margin-top:14px;max-height:280px;overflow:auto;display:flex;flex-direction:column;gap:8px}.m{padding:9px 12px;border-radius:14px;font-size:15px;line-height:1.45;max-width:88%}.a{background:#fffcf5;border:1px solid #efe3c7;align-self:flex-start}.u{background:#e9f0fa;align-self:flex-end}
+.pill{margin-top:14px;padding:12px 14px;border-radius:14px;font-size:14px}#booked{background:#edf6f1;border:1px solid #c5e0d0}#handover{background:#fff4e6;border:1px solid #f0d3a8}
+.fine{font-size:12px;color:var(--mut);text-align:center;margin-top:18px}
+</style></head><body><main>
+<span class="badge">HappySmile Dental Care · voice preview</span>
+<h1>Talk to Moli</h1>
+<p>Moli is our virtual assistant. Press the button, allow your microphone and say hello. She will ask what you need and find a time. You can interrupt her any time, and ask for a person whenever you like.</p>
+<div class="card"><input id="nm" placeholder="Your first name (optional, sample data only)" autocomplete="off"><button id="btn">Talk to Moli</button><div id="status" role="status"></div><div id="log" aria-live="polite"></div>
+<div id="booked" class="pill" hidden><b>Booked (sample):</b> <span id="bk"></span></div><div id="handover" class="pill" hidden><b>A team member will call you now.</b> <span id="ho"></span></div></div>
+<p class="fine">Demo with sample data. Do not share real health details. No real appointment is made.</p>
+</main><script src="moli.js"></script></body></html>
