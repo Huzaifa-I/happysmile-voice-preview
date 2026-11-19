@@ -1,6 +1,6 @@
 // Mints a short-lived, single-use token for the Gemini Live API. The real key never leaves the server.
 export default async () => {
-  const key = process.env.GEMINI_API_KEY;
+  const key = process.env.MOLI_GEMINI_KEY;
   const h = { 'content-type': 'application/json', 'cache-control': 'no-store' };
   if (!key) return new Response(JSON.stringify({ error: 'not_configured' }), { status: 503, headers: h });
   const now = Date.now();
