@@ -12,8 +12,9 @@ button{width:100%;min-height:52px;font:inherit;font-weight:650;color:#fff;border
 button.end{background:linear-gradient(180deg,#8a2b2b,#6d1f1f);box-shadow:0 0 0 2px #c9994a}button:disabled{opacity:.6}
 #status{margin:12px 0 0;text-align:center;font-size:14px;color:var(--mut);min-height:20px}#status.speak{color:#1d5fb3;font-weight:600}#status.err{color:#a33}
 #log{margin-top:14px;max-height:280px;overflow:auto;display:flex;flex-direction:column;gap:8px}.m{padding:9px 12px;border-radius:14px;font-size:15px;line-height:1.45;max-width:88%}.a{background:#fffcf5;border:1px solid #efe3c7;align-self:flex-start}.u{background:#e9f0fa;align-self:flex-end}
-.pill{margin-top:14px;padding:12px 14px;border-radius:14px;font-size:14px}#booked{background:#edf6f1;border:1px solid #c5e0d0}#handover{background:#fff4e6;border:1px solid #f0d3a8}
+.pill{margin-top:14px;padding:12px 14px;border-radius:14px;font-size:14px}#booked{background:#eef4fc;border:1px solid #bcd0ea}#handover{background:#fff4e6;border:1px solid #f0d3a8}
 .fine{font-size:12px;color:var(--mut);text-align:center;margin-top:18px}
+body.embed{background:transparent;min-height:0}body.embed main{padding:0}body.embed .badge,body.embed h1,body.embed>main>p,body.embed .fine{display:none}body.embed .card{box-shadow:none}
 </style></head><body><main>
 <span class="badge">HappySmile Dental Care · voice preview</span>
 <h1>Talk to Moli</h1>
@@ -21,4 +22,4 @@ button.end{background:linear-gradient(180deg,#8a2b2b,#6d1f1f);box-shadow:0 0 0 2
 <div class="card"><input id="nm" placeholder="Your first name (optional, sample data only)" autocomplete="off"><button id="btn">Talk to Moli</button><div id="status" role="status"></div><div id="log" aria-live="polite"></div>
 <div id="booked" class="pill" hidden><b>Booked (sample):</b> <span id="bk"></span></div><div id="handover" class="pill" hidden><b>A team member will call you now.</b> <span id="ho"></span></div></div>
 <p class="fine">Demo with sample data. Do not share real health details. No real appointment is made.</p>
-</main><script src="moli.js"></script></body></html>
+</main><script>var q=new URLSearchParams(location.search);if(q.get("embed")){document.body.className="embed"}if(q.get("n")){document.getElementById("nm").value=q.get("n").slice(0,30)}</script><script src="moli.js"></script></body></html>
